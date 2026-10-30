@@ -1,0 +1,604 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: white;
+
+    background-image:
+        linear-gradient(
+            rgba(5, 20, 50, 0.50),
+            rgba(5, 15, 45, 0.70)
+        ),
+        url("https://static.vecteezy.com/system/resources/thumbnails/041/860/736/small/ai-generated-alarm-clock-on-table-free-photo.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    transition: 0.4s ease;
+
+}
+html {
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    position: relative;
+}
+
+.header {
+    width: 90%;
+    max-width: 1400px;
+
+    margin: auto;
+    padding-top: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.clock-logo {
+    width: 55px;
+    height: 55px;
+
+    border: 3px solid white;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+}
+
+.logo-title {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo-subtitle {
+    margin-top: 5px;
+
+    color: #b8c2d5;
+
+    font-size: 15px;
+}
+
+
+.theme {
+    display: flex;
+    align-items: center;
+
+    padding: 5px;
+
+    border: 1px solid rgba(255,255,255,0.20);
+
+    border-radius: 35px;
+
+    background: rgba(10,25,55,0.55);
+
+    backdrop-filter: blur(12px);
+}
+
+.theme button {
+    border: none;
+
+    padding: 13px 23px;
+
+    border-radius: 30px;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+#darkBtn {
+    background: #285bc9;
+
+    box-shadow:
+        0 5px 20px rgba(50,100,220,0.35);
+}
+
+#lightBtn:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+#darkBtn:hover {
+    background: #376bd5;
+}
+
+.content {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 50px auto 0;
+
+    text-align: center;
+}
+
+.current-time {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+
+    color: #b8c1d2;
+
+    font-size: 14px;
+
+    letter-spacing: 7px;
+
+    margin-bottom: 18px;
+}
+
+.current-time::before,
+.current-time::after {
+    content: "";
+
+    width: 70px;
+    height: 1px;
+
+    background: rgba(255,255,255,0.40);
+}
+
+
+
+.title {
+    font-size: 68px;
+
+    font-weight: bold;
+
+    line-height: 1.1;
+
+    margin-bottom: 15px;
+}
+
+.title span {
+    color: #c14cff;
+
+    text-shadow:
+        0 0 25px rgba(193,76,255,0.55);
+}
+
+
+/* ================= SUBTITLE ================= */
+
+.subtitle {
+    color: #b7c0d1;
+
+    font-size: 20px;
+
+    margin-bottom: 45px;
+}
+
+
+.clock-card {
+    width: 850px;
+    max-width: 100%;
+
+    min-height: 300px;
+
+    margin: auto;
+
+    padding: 50px 35px 30px;
+
+    border-radius: 32px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(15,35,75,0.72),
+            rgba(30,20,65,0.58)
+        );
+
+    border: 1px solid rgba(110,100,255,0.70);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.45),
+        inset 0 0 35px rgba(80,80,255,0.08);
+}
+
+
+.time-container {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 18px;
+
+    min-height: 125px;
+}
+
+
+
+.time-box {
+    width: 190px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.time-box > div:first-child {
+    width: 190px;
+
+    font-size: 88px;
+
+    font-weight: bold;
+
+    line-height: 1;
+
+    letter-spacing: 2px;
+
+    font-variant-numeric: tabular-nums;
+
+    color: white;
+
+    text-align: center;
+
+    text-shadow:
+        0 0 20px rgba(255,255,255,0.35);
+}
+
+
+/* Seconds */
+
+.seconds-box > div:first-child {
+    color: #7854ff;
+
+    text-shadow:
+        0 0 25px rgba(120,84,255,0.65);
+}
+
+
+/* ================= TIME LABEL ================= */
+
+.time-label {
+    width: 190px;
+
+    margin-top: 16px;
+
+    color: #aeb8cb;
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    text-align: center;
+}
+
+
+/* ================= COLON ================= */
+
+.colon {
+    width: 30px;
+
+    font-size: 65px;
+
+    font-weight: normal;
+
+    color: white;
+
+    margin-bottom: 23px;
+
+    text-align: center;
+}
+
+
+/* ================= DAY ================= */
+
+.day {
+    margin-top: 35px;
+
+    font-size: 22px;
+
+    font-weight: 500;
+
+    color: white;
+}
+
+
+/* ================= DATE ================= */
+
+#date {
+    margin-top: 10px;
+
+    color: #dce2ed;
+
+    font-size: 18px;
+}
+
+
+/* ================= DAY CARD ================= */
+
+#daay,
+#month {
+    display: inline-flex;
+
+    width: 300px;
+    height: 95px;
+
+    margin-top: 35px;
+
+    margin-left: 8px;
+    margin-right: 8px;
+
+    padding: 20px;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 22px;
+
+    background:
+        rgba(20,30,70,0.60);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(14px);
+
+    transition: 0.3s ease;
+}
+
+
+/* ================= DAY/MONTH TEXT ================= */
+
+#daydisplay,
+#monthdisplay {
+    margin: 0;
+
+    color: #e5e9f2;
+
+    font-size: 18px;
+
+    font-weight: 500;
+}
+
+
+/* ================= DAY ICON ================= */
+
+#daay i {
+    color: #ffb52e;
+
+    font-size: 27px;
+
+    margin-right: 12px;
+
+    text-shadow:
+        0 0 12px rgba(255,181,46,0.55);
+}
+
+
+/* ================= MONTH ICON ================= */
+
+#month i {
+    color: #20e5a2;
+
+    font-size: 27px;
+
+    margin-right: 12px;
+
+    text-shadow:
+        0 0 12px rgba(32,229,162,0.45);
+}
+
+
+/* ================= CARD HOVER ================= */
+
+#daay:hover,
+#month:hover {
+    transform: translateY(-5px);
+
+    background:
+        rgba(45,55,100,0.72);
+}
+
+
+/* ================= QUOTE ================= */
+
+.quote {
+    margin-top: 55px;
+
+    margin-bottom: 35px;
+}
+
+.quote-text {
+    color: #c0c7d5;
+
+    font-size: 19px;
+
+    font-style: italic;
+
+    line-height: 1.6;
+
+    margin-bottom: 10px;
+}
+
+.author {
+    color: #aeb7c8;
+
+    font-size: 16px;
+}
+
+
+/* ================= LIGHT MODE ================= */
+
+body.light {
+    color: #222;
+
+    background-image:
+        linear-gradient(
+            rgba(220,230,245,0.45),
+            rgba(235,235,250,0.60)
+        ),
+        url("https://static.vecteezy.com/system/resources/thumbnails/041/860/736/small/ai-generated-alarm-clock-on-table-free-photo.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* Light logo */
+
+body.light .logo-title {
+    color: #222;
+}
+
+body.light .logo-subtitle {
+    color: #505b6e;
+}
+
+
+/* Light current time */
+
+body.light .current-time {
+    color: #505b6e;
+}
+
+body.light .current-time::before,
+body.light .current-time::after {
+    background: rgba(0,0,0,0.25);
+}
+
+
+/* Light subtitle */
+
+body.light .subtitle {
+    color: #505b6e;
+}
+
+
+/* Light clock */
+
+body.light .clock-card {
+    background:
+        rgba(255,255,255,0.62);
+
+    border-color:
+        rgba(80,80,180,0.45);
+
+    box-shadow:
+        0 20px 50px rgba(40,40,80,0.20);
+}
+
+
+/* Light numbers */
+
+body.light .time-box > div:first-child {
+    color: #222;
+
+    text-shadow:
+        0 0 10px rgba(0,0,0,0.10);
+}
+
+body.light .seconds-box > div:first-child {
+    color: #7045e8;
+}
+
+body.light .colon {
+    color: #222;
+}
+
+body.light .time-label {
+    color: #555e70;
+}
+
+body.light .day {
+    color: #222;
+}
+
+body.light #date {
+    color: #444;
+}
+
+
+
+body.light #daay,
+body.light #month {
+    background:
+        rgba(255,255,255,0.68);
+
+    border-color:
+        rgba(80,80,130,0.20);
+}
+
+body.light #daydisplay,
+body.light #monthdisplay {
+    color: #333;
+}
+
+
+body.light .theme {
+    background:
+        rgba(255,255,255,0.60);
+}
+
+body.light .theme button {
+    color: #222;
+}
+
+
+
+body.light #lightBtn {
+    background:
+        rgba(255,255,255,0.90);
+
+    box-shadow:
+        0 3px 12px rgba(0,0,0,0.10);
+}
+
+
+body.light #darkBtn {
+    background: transparent;
+}
+
+
+
+body.light .quote-text,
+body.light .author {
+    color: #505b6e;
+}
+
+

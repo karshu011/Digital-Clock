@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeNow - Digital Clock</title>
+    <link rel="stylesheet" href="digi.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <div class="clock-logo">🕐 </div>
+            <div class="logo-text">
+                <div class="logo-title">
+                    TimeNow
+                </div>
+                <div class="logo-subtitle">
+                    Stay on Time, Stay Ahead
+                </div>
+            </div>
+        </div>
+        <div class="theme">
+            <button id="lightBtn">
+                ☀️ Light
+            </button>
+            <button id="darkBtn">
+                🌙 Dark
+            </button>
+        </div>
+    </div>
+    <div class="content">
+        <div class="current-time">
+            CURRENT TIME
+        </div>
+        <div class="title">
+            Digital <span>Clock</span>
+        </div>
+        <div class="subtitle">
+            Simple. Beautiful. Always Accurate.
+        </div>
+        <div class="clock-card">
+            <div class="time-container">
+                <div class="time-box">
+                    <div id="hours">
+                        00
+                    </div>
+                    <div class="time-label">
+                        HOURS
+                    </div>
+                </div>
+                <div class="colon">
+                    :
+                </div>
+                <div class="time-box">
+                    <div id="minutes">
+                        00
+                    </div>
+                    <div class="time-label">
+                        MINUTES
+                    </div>
+                </div>
+                <div class="colon">
+                    :
+                </div>
+                <div class="time-box seconds-box">
+                    <div id="seconds">
+                        00
+                    </div>
+                    <div class="time-label">
+                        SECONDS
+                    </div>
+                </div>
+            </div>
+            <div class="day" id="day">
+                Tuesday
+            </div>
+            <div class="date" id="date">
+                14 January 2025
+            </div>
+       
+        </div>
+             <div id="daay">
+        <p id="daydisplay"><i class="fa-solid fa-sun"></i>Day</p>
+        </div>
+        <div id="month">
+        <p id="monthdisplay"><i class="fa-solid fa-calendar-days"></i>Month</p>
+    </div>
+        <div class="quote">
+            <div class="quote-text">
+                "Better Three Hours Too Soon,
+                Than A Minute Too Late."
+            </div>
+
+            <div class="author">
+                — William Shakespeare
+            </div>
+        </div>
+    </div>
+    
+<script src="digi.js"></script>
+</body>
+
+</html>
